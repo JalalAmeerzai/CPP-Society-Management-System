@@ -2,7 +2,8 @@
 #define DATA_H
 
 #include <iostream>
-#include <vector> //USE VECTOR
+#include <vector> //USE VECTOR for objects
+#include "iomanip"
 #include "Admin.h"
 #include "Guard.h"
 #include "House.h"
