@@ -3,7 +3,6 @@
 
 #include "Staff.h"
 #include <iostream>
-#pragma once
 
 using namespace std;
 
@@ -15,15 +14,15 @@ class AdminAndJanitorial : public Staff{
         ~AdminAndJanitorial(){}
 
         AdminAndJanitorial(string getId, string getName, float getSalary, string getCategory, string getDesignation){
-            id = getId;
-            name = getName;
-            salary = getSalary;
-            category = getCategory;
-            designation = getDesignation;
+            this->setId(getId);
+            this->setName(getName);
+            this->setSalary(getSalary);
+            this->setCategory(getCategory);
+            this->setDesignation(getDesignation);
         }
 
         string getDesignation(){
-            return designation;
+            return this->designation;
         }
 
         void setDesignation(string designation){

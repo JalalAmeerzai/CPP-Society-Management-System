@@ -20,7 +20,7 @@ House h7("D-20",'D',"Umair Basit","Resident");
 House h8("A-05",'A',"Sajeel Ahmed","Tenant");
 House h9("E-09",'E',"M. Wasay","Resident");
 House h10("E-01",'E',"Tahir Ahmed","Tenant");
-House *houses[] = {&h1, &h2, &h3, &h4, &h5, &h6, &h7, &h8, &h9, &h10};
+vector <House> houses;
 
 AdminAndJanitorial s1("Adm-01", "M. Sabir", 50000, "Administrative", "President");
 AdminAndJanitorial s2("Adm-02", "Arslan Khan", 30000, "Administrative", "Head Recreations");
@@ -32,7 +32,7 @@ AdminAndJanitorial s7("Jnt-07", "Areeb Ahmed", 13000, "Janitorial", "Sweeper AB"
 AdminAndJanitorial s8("Jnt-08", "Jawwad Khan", 13000, "Janitorial", "Sweeper C");
 AdminAndJanitorial s9("Jnt-09", "Sibtain Shabir", 13000, "Janitorial", "Sweeper D");
 AdminAndJanitorial s10("Jnt-10", "Affan Shahid", 13000, "Janitorial", "Sweeper E");
-AdminAndJanitorial *staff[] = {&s1, &s2, &s3, &s4, &s5, &s6, &s7, &s8, &s9, &s10};
+vector <AdminAndJanitorial> staff;
 
 Guard g1("Scr-01", "M. Ahmad", 25000, "Security", "Night", "Block A");
 Guard g2("Scr-02", "Sharjeel Khan", 20000, "Security", "Night", "Block B");
@@ -44,6 +44,55 @@ Guard g7("Scr-07", "Sameer Shah", 25000, "Security", "Morning", "Block B");
 Guard g8("Scr-08", "Shakeel Khan", 22000, "Security", "Morning", "Block C");
 Guard g9("Scr-09", "Sohail Sardar", 14000, "Security", "Morning", "Block D");
 Guard g10("Scr-10", "Armaiz", 16000, "Security", "Morning", "Block E");
-Guard *guards[] = {&g1, &g2, &g3, &g4, &g5, &g6, &g7, &g8, &g9, &g10};
+vector <Guard> guards;
+
+class Data{
+    private:
+        static void populateHouseData(){
+            houses.push_back(h1);
+            houses.push_back(h2);
+            houses.push_back(h3);
+            houses.push_back(h4);
+            houses.push_back(h5);
+            houses.push_back(h6);
+            houses.push_back(h7);
+            houses.push_back(h8);
+            houses.push_back(h9);
+            houses.push_back(h10);
+        }
+
+        static void populateAdminData(){
+            staff.push_back(s1);
+            staff.push_back(s2);
+            staff.push_back(s3);
+            staff.push_back(s4);
+            staff.push_back(s5);
+            staff.push_back(s6);
+            staff.push_back(s7);
+            staff.push_back(s8);
+            staff.push_back(s9);
+            staff.push_back(s10);
+        }
+
+        static void populateGuardData(){
+            guards.push_back(g1);
+            guards.push_back(g2);
+            guards.push_back(g3);
+            guards.push_back(g4);
+            guards.push_back(g5);
+            guards.push_back(g6);
+            guards.push_back(g7);
+            guards.push_back(g8);
+            guards.push_back(g9);
+            guards.push_back(g10);
+        }
+
+    public:
+        static void bootstrapData(){
+            populateHouseData();
+            populateAdminData();
+            populateGuardData();
+        }
+};
 
 #endif 

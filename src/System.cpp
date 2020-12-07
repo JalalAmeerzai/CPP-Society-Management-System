@@ -1,4 +1,6 @@
 #include "SocietyManagementSystem.cpp"
+#include <vector>
+#include "Data.h"
 
 using namespace std;
 

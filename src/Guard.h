@@ -3,7 +3,7 @@
 
 #include "Staff.h"
 #include <iostream>
-#pragma once
+
 using namespace std;
 
 class Guard : public Staff{
@@ -15,16 +15,16 @@ class Guard : public Staff{
         ~Guard(){}
 
         Guard(string getId, string getName, float getSalary, string getCategory, string getShift, string getLocation){
-            id = getId;
-            name = getName;
-            salary = getSalary;
-            category = getCategory;
-            shift = getShift;
-            location = getLocation;
+            this->setId(getId);
+            this->setName(getName);
+            this->setSalary(getSalary);
+            this->setCategory(getCategory);
+            this->setShift(getShift);
+            this->setLocation(getLocation);
         }
 
         string getShift(){
-            return shift;
+            return this->shift;
         }
 
         void setShift(string shift){
@@ -32,10 +32,10 @@ class Guard : public Staff{
         }
 
         string getLocation(){
-            return location;
+            return this->location;
         }
 
-        void setLocations(string location){
+        void setLocation(string location){
             this->location = location;
         }
 };

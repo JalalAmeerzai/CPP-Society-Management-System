@@ -15,42 +15,42 @@ class House{
     public:
     	~House(){}
         House(string getHouseNo, char getBlock, string getName, string getType){
-            houseNo = getHouseNo;
-            block = getBlock;
-            residentName = getName;
-            type = getType;
+            this->setHouseNo(getHouseNo);
+            this->setBlock(getBlock);
+            this->setResidentName(getName);
+            this->setType(getType);
         }
 
         string getHouseNo(){
-            return houseNo;
+            return this->houseNo;
         }
 
-        void setHouseNo(string houseNo){
-            this->houseNo = houseNo;
+        void setHouseNo(string hName){
+            this->houseNo = hName;
         }
 
         char getBlock(){
-            return block;
+            return this->block;
         }
 
-        void setBlock(char block){
-            this->block = block;
+        void setBlock(char blk){
+            this->block = blk;
         }
 
         string getResidentName(){
-            return residentName;
+            return this->residentName;
         }
 
-        void setResidentName(string residentName){
-            this->residentName = residentName;
+        void setResidentName(string rName){
+            this->residentName = rName;
         }
 
         string getType(){
-            return type;
+            return this->type;
         }
 
-        void setType(string type){
-            this->type = type;
+        void setType(string tp){
+            this->type = tp;
         }
 };
 

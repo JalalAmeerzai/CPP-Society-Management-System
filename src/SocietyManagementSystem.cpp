@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <cstdlib>
 #include "SocietyDatabase.cpp"
+#include "Data.h"
 
 
 using namespace std;
@@ -115,7 +116,6 @@ class SocietyManagementSystem{
 
 
             static void generateHouseMenu(){
-                SocietyDatabase::setHouse("e-101",'e',"rasheed","tenant");
                 system("cls");
                 cout << "+----------------------   InstaRec   ----------------------+"<<endl;
                 cout << "|                                                          |"<<endl;
@@ -125,11 +125,13 @@ class SocietyManagementSystem{
                 cout << "|              A) List Houses        (Press 1)             |"<<endl;
                 cout << "|              B) Search By Resident (Press 2)             |"<<endl;
                 cout << "|              C) Search By House#   (Press 3)             |"<<endl;
-                cout << "|              D) Go Back            (Press 4)             |"<<endl;
+                cout << "|              D) Create Entry       (Press 4)             |"<<endl;
+                cout << "|              E) Go Back            (Press 5)             |"<<endl;
                 cout << "|                                                          |"<<endl;
                 cout << "+----------------------------------------------------------+";
-                string searchName;
-                string searchId;
+                string searchName, searchId;
+                string createName, createId, createType;
+                char createBlock; 
                 switch(tolower(getch())){
                     case '1':
                         system("cls");
@@ -161,6 +163,23 @@ class SocietyManagementSystem{
                         generateHouseMenu();
                         break;
                     case '4':
+                        system("cls");
+                        cout << "+---------------------------------------------------------------------------------------------------+" <<endl;
+                        cout << "|                                        Enter House Details:                                       |" <<endl;
+                        cout << "Enter House#: ";
+                        cin >> createId;
+                        cout << "Enter House Block: ";
+                        cin >> createBlock;
+                        cout << "Enter Resident Name: ";
+                        cin >> createName;
+                        cout << "Enter Type (Resident/Tenant): ";
+                        cin >> createType;
+                        SocietyDatabase::setHouse(createId, createBlock, createName, createType);
+                        cout << "\n\nRecord Successfully Created. PRESS ANY KEY TO GO BACK";
+                        getch();
+                        generateHouseMenu();
+                        break;
+                    case '5':
                         mainMenu();
                         break;
                     default:
@@ -179,11 +198,13 @@ class SocietyManagementSystem{
                 cout << "|              A) Staff List         (Press 1)             |"<<endl;
                 cout << "|              B) Search By Name     (Press 2)             |"<<endl;
                 cout << "|              C) Search By ID       (Press 3)             |"<<endl;
-                cout << "|              D) Go Back            (Press 4)             |"<<endl;
+                cout << "|              D) Create Entry       (Press 4)             |"<<endl;
+                cout << "|              E) Go Back            (Press 5)             |"<<endl;
                 cout << "|                                                          |"<<endl;
                 cout << "+----------------------------------------------------------+";
-                string searchName;
-                string searchId;
+                string searchName, searchId;
+                float createSalary;
+                string createId, createName, createCategory, createDesignation;
                 switch(tolower(getch())){
                     case '1':
                         system("cls");
@@ -215,6 +236,25 @@ class SocietyManagementSystem{
                         generateStaffMenu();
                         break;
                     case '4':
+                        system("cls");
+                        cout << "+---------------------------------------------------------------------------------------------------+" <<endl;
+                        cout << "|                                        Enter Admin Details:                                       |" <<endl;
+                        cout << "Enter Staff ID: ";
+                        cin >> createId;
+                        cout << "Enter Staff Name: ";
+                        cin >> createName;
+                        cout << "Enter Staff Salary: ";
+                        cin >> createSalary;
+                        cout << "Enter Staff Category (Admin/Janitorial): ";
+                        cin >> createCategory;
+                        cout << "Enter Staff Designation: ";
+                        cin >> createDesignation;
+                        SocietyDatabase::setStaff(createId, createName, createSalary, createCategory, createDesignation);
+                        cout << "\n\nRecord Successfully Created. PRESS ANY KEY TO GO BACK";
+                        getch();
+                        generateStaffMenu();
+                        break;
+                    case '5':
                         mainMenu();
                         break;
                     default:
@@ -233,11 +273,13 @@ class SocietyManagementSystem{
                 cout << "|              A) Guard List         (Press 1)             |"<<endl;
                 cout << "|              B) Search By Name     (Press 2)             |"<<endl;
                 cout << "|              C) Search By ID       (Press 3)             |"<<endl;
-                cout << "|              D) Go Back            (Press 4)             |"<<endl;
+                cout << "|              D) Create Entry       (Press 4)             |"<<endl;
+                cout << "|              E) Go Back            (Press 5)             |"<<endl;
                 cout << "|                                                          |"<<endl;
                 cout << "+----------------------------------------------------------+";
-                string searchName;
-                string searchId;
+                string searchName, searchId;
+                float createSalary;
+                string createId, createName, createCategory="Security", createShift, createLocation;
                 switch(tolower(getch())){
                     case '1':
                         system("cls");
@@ -269,6 +311,25 @@ class SocietyManagementSystem{
                         generateGuardMenu();
                         break;
                     case '4':
+                        system("cls");
+                        cout << "+---------------------------------------------------------------------------------------------------+" <<endl;
+                        cout << "|                                        Enter Guard Details:                                       |" <<endl;
+                        cout << "Enter Guard ID: ";
+                        cin >> createId;
+                        cout << "Enter Guard Name: ";
+                        cin >> createName;
+                        cout << "Enter Guard Salary: ";
+                        cin >> createSalary;
+                        cout << "Enter Guard Shift (Night/Morning): ";
+                        cin >> createShift;
+                        cout << "Enter Guard Location (Block#): ";
+                        cin >> createLocation;
+                        SocietyDatabase::setGuard(createId, createName, createSalary, createCategory, createShift, createLocation);
+                        cout << "\n\nRecord Successfully Created. PRESS ANY KEY TO GO BACK";
+                        getch();
+                        generateGuardMenu();
+                        break;
+                    case '5':
                         mainMenu();
                         break;
                     default:
@@ -279,6 +340,7 @@ class SocietyManagementSystem{
 
         public:
             static void initiate(){
+                Data::bootstrapData();
                 mainMenu();
             }
     };
