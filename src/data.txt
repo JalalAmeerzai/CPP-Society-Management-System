@@ -1,0 +1,30 @@
+D-18,D,M. Sabir,Tenant
+C-15, C,Taha Ahmed Khan,Resident
+C-19,C,Sabih Ahmad,Resident
+A-10,A,Syed Fazal Abbass,Tenant
+B-13,B,Hamd Rehman,Tenant
+B-10,B,Abdur Rehman,Resident
+D-20,D,Umair Basit,Resident
+A-05,A,Sajeel Ahmed,Tenant
+E-09,E,M. Wasay,Resident
+E-01,E,Tahir Ahmed,Tenant
+Adm-01,M. Sabir,50000,Administrative,President
+Adm-02,Arslan Khan,30000,Administrative,Head Recreations
+Adm-03,Annie,40000,Administrative,Director
+Adm-04,Hammad Khan,30000,Administrative,Secretary
+Adm-05,Asif Ali,25000,Administrative,Maintenance
+Jnt-06,Farhan Mangi,20000,Janitorial,Union Head
+Jnt-07,Areeb Ahmed,13000,Janitorial,Sweeper AB
+Jnt-08,Jawwad Khan,13000,Janitorial,Sweeper C
+Jnt-09,Sibtain Shabir,13000,Janitorial,Sweeper D
+Jnt-10,Affan Shahid,13000,Janitorial,Sweeper E
+Scr-01,M. Ahmad,25000,Security,Night,Block A
+Scr-02,Sharjeel Khan,20000,Security,Night,Block B
+Scr-03,Osama Ahmed,15000,Security,Night,Block C
+Scr-04,Shahdaab,18000,Security,Night,Block D
+Scr-05,Babar Ali,14000,Security,Night,Block E
+Scr-06,Shoaib Sheikh,30000,Security,Morning,Block A
+Scr-07,Sameer Shah,25000,Security,Morning,Block B
+Scr-08,Shakeel Khan,22000,Security,Morning,Block C
+Scr-09,Sohail Sardar,14000,Security,Morning,Block D
+Scr-10,Armaiz,16000,Security,Morning,Block E

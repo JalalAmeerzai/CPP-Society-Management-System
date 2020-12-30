@@ -9,7 +9,7 @@ class Staff{
     protected:
         string id;
         string name;
-        float salary;
+        string salary;
         string category;
     
     public:
@@ -29,11 +29,11 @@ class Staff{
             this->name = name;
         }
 
-        float getSalary(){
+        string getSalary(){
             return this->salary;
         }
 
-        void setSalary(float salary){
+        void setSalary(string salary){
             this->salary = salary;
         }
 

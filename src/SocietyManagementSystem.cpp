@@ -2,7 +2,6 @@
 #include <conio.h>
 #include <cstdlib>
 #include "SocietyDatabase.cpp"
-#include "Data.h"
 
 
 using namespace std;
@@ -203,7 +202,7 @@ class SocietyManagementSystem{
                 cout << "|                                                          |"<<endl;
                 cout << "+----------------------------------------------------------+";
                 string searchName, searchId;
-                float createSalary;
+                string createSalary;
                 string createId, createName, createCategory, createDesignation;
                 switch(tolower(getch())){
                     case '1':
@@ -278,7 +277,7 @@ class SocietyManagementSystem{
                 cout << "|                                                          |"<<endl;
                 cout << "+----------------------------------------------------------+";
                 string searchName, searchId;
-                float createSalary;
+                string createSalary;
                 string createId, createName, createCategory="Security", createShift, createLocation;
                 switch(tolower(getch())){
                     case '1':
@@ -340,7 +339,6 @@ class SocietyManagementSystem{
 
         public:
             static void initiate(){
-                Data::bootstrapData();
                 mainMenu();
             }
     };

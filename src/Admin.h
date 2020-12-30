@@ -13,7 +13,7 @@ class AdminAndJanitorial : public Staff{
     public:
         ~AdminAndJanitorial(){}
 
-        AdminAndJanitorial(string getId, string getName, float getSalary, string getCategory, string getDesignation){
+        AdminAndJanitorial(string getId, string getName, string getSalary, string getCategory, string getDesignation){
             this->setId(getId);
             this->setName(getName);
             this->setSalary(getSalary);

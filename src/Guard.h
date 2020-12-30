@@ -14,7 +14,7 @@ class Guard : public Staff{
     public:
         ~Guard(){}
 
-        Guard(string getId, string getName, float getSalary, string getCategory, string getShift, string getLocation){
+        Guard(string getId, string getName, string getSalary, string getCategory, string getShift, string getLocation){
             this->setId(getId);
             this->setName(getName);
             this->setSalary(getSalary);
